@@ -1,12 +1,12 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import {NextApiRequest} from "next"
+import {NextRequest} from "next/server"
 
 export const config = {
   runtime: "experimental-edge",
 };
 
 
-export default async function handler(req: NextApiRequest) {
+export default async function handler(req: NextRequest) {
   return new Response(
     JSON.stringify({
       name: process.env.NEXT_RUNTIME,
